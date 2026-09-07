@@ -5,7 +5,7 @@
 #--------------------------------------------------------------------- 
 
 set echo  # echoes the commands
-set expname = cluster_f10_d10_HomogRad
+set expname = cluster_f10_d14_HomogRadCTRL
 
 # set paths
 set vvmdir = ` pwd | rev | cut -d/ -f 3- | rev `

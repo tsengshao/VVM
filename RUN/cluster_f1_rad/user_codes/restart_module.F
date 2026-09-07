@@ -50,7 +50,7 @@ LOGICAL(KIND=log_kind) :: do_surface_restart = .true.
 LOGICAL(KIND=log_kind) :: do_landsurface_restart = .false.
 LOGICAL(KIND=log_kind) :: read_hydrometeor_restart = .true.
 
-INTEGER(KIND=int_kind) :: default_restart_it = 72*10
+INTEGER(KIND=int_kind) :: default_restart_it = 72*14
 !10, 15, 21, 22, 24, 26, 28, 29
 !720, 1080, 1512, 1584, 1728, 1872, 2016, 2088
 

@@ -29,6 +29,8 @@ SUBROUTINE RADIATION_RRTMG(ITT, NRADD, tg, PBAR, PIBAR, DX, &
       USE bound
       USE utils, only : xyavg2
       USE domain_decomposition
+      USE user_module, only: &
+              UPDATED_RADIATIVE_HEATING_PROFILE
                
       IMPLICIT NONE
       
@@ -306,23 +308,24 @@ SUBROUTINE RADIATION_RRTMG(ITT, NRADD, tg, PBAR, PIBAR, DX, &
       CALL rad_full()
 !---------------------------------------------------
 
-!---------------------------------------------------
-! EXP : Homog-Rad, the radiative heating rates are 
-! spatially homogenized at each level before being 
-! applied as a tendency at each radiation time step.
-      lwr8(:,:,:) = lwHeatingRate_3d (:,:,:)
-      swr8(:,:,:) = swHeatingRate_3d (:,:,:)
-      CALL XYAVG2(lwr8,0,mi1,mj1,NK1,1,NK1,LWHR_MN)
-      CALL XYAVG2(swr8,0,mi1,mj1,nk1,1,NK1,SWHR_MN)
-      DO K = 1, NK1
-      DO J = 1, MJ1
-      DO I = 1, MI1
-        lwHeatingRate_3d(I,J,K) = LWHR_MN(K)
-        swHeatingRate_3d(I,J,K) = SWHR_MN(K)
-      ENDDO
-      ENDDO
-      ENDDO
-!---------------------------------------------------
+!!   !---------------------------------------------------
+!!   ! EXP : online calculated Homog-Rad, the radiative 
+!!   ! heating rates are spatially homogenized at each 
+!!   ! level before being applied as a tendency at each
+!!   ! radiation time step.
+!!         lwr8(:,:,:) = lwHeatingRate_3d (:,:,:)
+!!         swr8(:,:,:) = swHeatingRate_3d (:,:,:)
+!!         CALL XYAVG2(lwr8,0,mi1,mj1,NK1,1,NK1,LWHR_MN)
+!!         CALL XYAVG2(swr8,0,mi1,mj1,nk1,1,NK1,SWHR_MN)
+!!         DO K = 1, NK1
+!!         DO J = 1, MJ1
+!!         DO I = 1, MI1
+!!           lwHeatingRate_3d(I,J,K) = LWHR_MN(K)
+!!           swHeatingRate_3d(I,J,K) = SWHR_MN(K)
+!!         ENDDO
+!!         ENDDO
+!!         ENDDO
+!!   !---------------------------------------------------
 
 ! Calculate potential temperature tendency term
       DO 140 K = 2, NK2
@@ -336,6 +339,23 @@ SUBROUTINE RADIATION_RRTMG(ITT, NRADD, tg, PBAR, PIBAR, DX, &
         DTRADLW(I,J,K) = lwHeatingRate_3d(I,J,K-1)
         DTRADSW(I,J,K) = swHeatingRate_3d(I,J,K-1)
   140 CONTINUE
+
+!---------------------------------------------------
+! EXP : OFFLINE Homog-Rad,the domain average radiative
+! heating is the same as in CTRL (from file), but each
+! grid point receives identical radiative heating tendencies. 
+
+  CALL UPDATED_RADIATIVE_HEATING_PROFILE(itt)
+  DO K = 2, NK2
+  DO J = 1, MJ1
+  DO I = 1, MI1
+        lwHeatingRate_3d(I,J,K-1) = DTRADLW(I,J,K)
+        swHeatingRate_3d(I,J,K-1) = DTRADSW(I,J,K)
+  ENDDO
+  ENDDO
+  ENDDO
+
+!---------------------------------------------------
   
      
       DO 150 K = 1, NK1

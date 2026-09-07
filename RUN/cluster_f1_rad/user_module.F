@@ -16,6 +16,7 @@ IMPLICIT NONE
 PRIVATE
 
 PUBLIC :: &
+  UPDATED_RADIATIVE_HEATING_PROFILE, &
   USER_set_mean_profile_and_SST, &
   USER_set_3D_perturbation, &
   USER_set_vertical_coordinate, &
@@ -24,6 +25,83 @@ PUBLIC :: &
   USER_set_CHEM_reaction_file
 
 CONTAINS
+
+
+  SUBROUTINE UPDATED_RADIATIVE_HEATING_PROFILE(itt)
+      USE mpi
+      USE pnetcdf
+      USE radoutld, ONLY : DTRADSW, DTRADLW
+
+      INTEGER, INTENT(IN) :: itt
+      CHARACTER(LEN=*), PARAMETER :: profile_dir = &
+          '/work1/umbrella0c/PROFILE/domain_average/RRCE_3km_f00_14/'
+      CHARACTER(LEN=7), PARAMETER :: varnames(2) = (/ 'dtradsw', 'dtradlw' /)
+      INTEGER :: ncid, varid, dimid, n, k, i0, i1, ierr
+      INTEGER, SAVE :: nt
+      INTEGER(KIND=mpi_offset_kind) :: nlev, ntime
+      INTEGER(KIND=mpi_offset_kind) :: arraystart(4), readlen(4)
+      REAL(KIND=dbl_kind) :: time_s, weight
+      ! Fortran dimension order: lon, lat, lev, time, SW/LW.
+      REAL(KIND=dbl_kind), ALLOCATABLE, SAVE :: profiles(:,:,:,:,:)
+
+      ! Read once per MPI task. All tasks must call this routine together.
+      IF (.NOT. ALLOCATED(profiles)) THEN
+          DO n = 1, 2
+              CALL check_nc(nfmpi_open(MPI_COMM_WORLD, &
+                  profile_dir // varnames(n) // '.nc', NF_NOWRITE, MPI_INFO_NULL, ncid))
+              CALL check_nc(nfmpi_inq_dimid(ncid, 'lev', dimid))
+              CALL check_nc(nfmpi_inq_dimlen(ncid, dimid, nlev))
+              CALL check_nc(nfmpi_inq_dimid(ncid, 'time', dimid))
+              CALL check_nc(nfmpi_inq_dimlen(ncid, dimid, ntime))
+              IF (nlev /= NK2 .OR. ntime < 1) THEN
+                  WRITE(*,*) 'Radiation profile dimensions do not match: ', nlev, ntime
+                  CALL MPI_ABORT(MPI_COMM_WORLD, 1, ierr)
+              ENDIF
+              IF (n == 1) THEN
+                  nt = INT(ntime)
+                  ALLOCATE(profiles(1,1,NK2,nt,2))
+              ELSE IF (ntime /= nt) THEN
+                  WRITE(*,*) 'SW and LW profile time counts do not match'
+                  CALL MPI_ABORT(MPI_COMM_WORLD, 1, ierr)
+              ENDIF
+              arraystart = 1
+              readlen = (/ 1_mpi_offset_kind, 1_mpi_offset_kind, nlev, ntime /)
+              CALL check_nc(nfmpi_inq_varid(ncid, varnames(n), varid))
+              CALL check_nc(nfmpi_get_vara_double_all(ncid, varid, &
+                  arraystart, readlen, profiles(:,:,:,:,n)))
+              CALL check_nc(nfmpi_close(ncid))
+          ENDDO
+      ENDIF
+
+      ! Model time = itt * PASS_BIG_DT s; file record i is at (i-1) * 1200 s.
+      ! Clamp to the first/last record outside the available time range.
+      time_s = MAX(0._dbl_kind, MIN(REAL(itt,dbl_kind) * PASS_BIG_DT, &
+                                   REAL(nt-1,dbl_kind) * 1200._dbl_kind))
+      i0 = MIN(INT(time_s / 1200._dbl_kind) + 1, nt)
+      i1 = MIN(i0 + 1, nt)
+      weight = (time_s - REAL(i0-1,dbl_kind) * 1200._dbl_kind) / 1200._dbl_kind
+
+      ! Apply the same vertical profile at every horizontal point (K/s).
+      DO k = 1, NK2
+          DTRADSW(:,:,k) = (1._dbl_kind-weight) * profiles(1,1,k,i0,1) &
+                                       + weight * profiles(1,1,k,i1,1)
+          DTRADLW(:,:,k) = (1._dbl_kind-weight) * profiles(1,1,k,i0,2) &
+                                       + weight * profiles(1,1,k,i1,2)
+      ENDDO
+      if(my_task.eq.0) WRITE(*,*) "UPDATED radiative heating rate in ITT =",itt
+
+  CONTAINS
+
+      SUBROUTINE check_nc(status)
+          INTEGER, INTENT(IN) :: status
+          IF (status == NF_NOERR) RETURN
+          WRITE(*,*) 'Radiation profile ', varnames(n), ': ', TRIM(nfmpi_strerror(status))
+          CALL MPI_ABORT(MPI_COMM_WORLD, 1, ierr)
+      END SUBROUTINE check_nc
+
+  END SUBROUTINE UPDATED_RADIATIVE_HEATING_PROFILE
+
+
   SUBROUTINE USER_set_mean_profile_and_SST
       !! --------------------
       !! Object of this function give the MEAN profile at model levels

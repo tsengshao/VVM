@@ -65,11 +65,12 @@ cd "$script_dir"
 setup_file=vvm.setup
 run_file=vvm.run
 restart_file=user_codes/restart_module.F
+profile_file=user_module.F
 steps=216
 vvmdir=$(cd -- "$script_dir/../.." && pwd)
 datadir=$vvmdir/DATA
 
-for file in "$setup_file" "$run_file" "$restart_file"; do
+for file in "$setup_file" "$run_file" "$restart_file" "$profile_file"; do
     if [[ ! -f $file ]]; then
         echo "Error: required file not found: $script_dir/$file" >&2
         exit 1
@@ -78,6 +79,7 @@ done
 
 exp_pattern='^[[:space:]]*set[[:space:]]+expname[[:space:]]*=[[:space:]]+.*[_-][dD][0-9]+([_-].*)?$'
 restart_pattern='^[[:space:]]*INTEGER.*default_restart_it[[:space:]]*=[[:space:]]*72[[:space:]]*\*[[:space:]]*[0-9]+'
+profile_pattern="^[[:space:]]*'/work1/umbrella0c/PROFILE/domain_average/RRCE_3km_f00_[0-9]+/'"
 
 require_one_match() {
     local pattern=$1
@@ -94,6 +96,7 @@ require_one_match() {
 require_one_match "$exp_pattern" "$setup_file"
 require_one_match "$exp_pattern" "$run_file"
 require_one_match "$restart_pattern" "$restart_file"
+require_one_match "$profile_pattern" "$profile_file"
 
 if ((start_day <= end_day)); then
     day_step=$interval
@@ -144,6 +147,9 @@ while :; do
         planned=$(grep -E "$restart_pattern" "$restart_file" | \
             sed -E "s/^(.*default_restart_it[[:space:]]*=[[:space:]]*)72[[:space:]]*\*[[:space:]]*[0-9]+(.*)$/\\172*${day}\\2/")
         printf '[dry-run] %s: %s\n' "$restart_file" "$planned"
+        planned=$(grep -E "$profile_pattern" "$profile_file" | \
+            sed -E "s|(RRCE_3km_f00_)[0-9]+/|\\1${day}/|")
+        printf '[dry-run] %s: %s\n' "$profile_file" "$planned"
         echo '[dry-run] ./vvm.setup && ./vvm.run'
     else
         for file in "$setup_file" "$run_file"; do
@@ -154,6 +160,9 @@ while :; do
         sed -E -i \
             "s/^(.*default_restart_it[[:space:]]*=[[:space:]]*)72[[:space:]]*\*[[:space:]]*[0-9]+(.*)$/\\172*${day}\\2/" \
             "$restart_file"
+        sed -E -i \
+            "s|(RRCE_3km_f00_)[0-9]+/|\\1${day}/|" \
+            "$profile_file"
 
         ./vvm.setup && ./vvm.run
     fi

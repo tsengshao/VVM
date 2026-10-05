@@ -13,7 +13,7 @@
 # Example: make INTEL=true DEBUG=true
 
 set echo  # echoes the commands
-set expname = cluster_f20_d10
+set expname = cluster_f60_d14
 
 # set job system and compiler
 set compiler = 'intel_f1'
@@ -58,7 +58,7 @@ sed -e 's/expname.out/'${expname}'.out/g' \
     -e 's/total_cores/256/g' ${blddir}/run.sh.${jobsys} > ${expdir}/run.sh
 
 cd ${expdir}
-sbatch -N 1-3 -A MST114418 run.sh
+sbatch -N 1-3 -A MST114418 -p ct448,cf448 run.sh
 
 exit
 

@@ -1,0 +1,886 @@
+{
+  "method": "daily-native-theta-qv-fixed-column-75-level-zero-wind-v1",
+  "format": "sounding_VVM",
+  "pressure_units": "hPa",
+  "qv_units": "g/kg",
+  "pressure_file": "/data3/C.shaoyu/VVM/DATA/RRCE_3km_f00_15p028/fort.98",
+  "temperature_method": "mean(theta) * source PIBAR",
+  "u_m_s": 0.0,
+  "v_m_s": 0.0,
+  "requested_jobs": 35,
+  "completed_jobs": 35,
+  "complete": true,
+  "file_counts": {
+    "domain_mean": 35,
+    "center": 34,
+    "antipode": 34
+  },
+  "results": [
+    {
+      "job": "daily_mean_day-000",
+      "day": 0.0,
+      "samples": 72,
+      "levels": 75,
+      "files": {
+        "domain_mean": "/data3/C.shaoyu/genesis/data/cross_section/RRCE_3km_f00/soundings_VVM/sounding_daily_mean_day-000_domain_mean.txt"
+      },
+      "mean_center_km": null,
+      "column_yx": null,
+      "antipode_column_yx": null,
+      "missing_center_steps": [
+        0
+      ],
+      "format": "sounding_VVM"
+    },
+    {
+      "job": "daily_mean_day-001",
+      "day": 1.0,
+      "samples": 72,
+      "levels": 75,
+      "files": {
+        "domain_mean": "/data3/C.shaoyu/genesis/data/cross_section/RRCE_3km_f00/soundings_VVM/sounding_daily_mean_day-001_domain_mean.txt",
+        "center": "/data3/C.shaoyu/genesis/data/cross_section/RRCE_3km_f00/soundings_VVM/sounding_daily_mean_day-001_center.txt",
+        "antipode": "/data3/C.shaoyu/genesis/data/cross_section/RRCE_3km_f00/soundings_VVM/sounding_daily_mean_day-001_antipode.txt"
+      },
+      "mean_center_km": [
+        676.1707499999998,
+        441.22583333333347
+      ],
+      "column_yx": [
+        147,
+        225
+      ],
+      "antipode_column_yx": [
+        339,
+        33
+      ],
+      "missing_center_steps": [],
+      "format": "sounding_VVM"
+    },
+    {
+      "job": "daily_mean_day-002",
+      "day": 2.0,
+      "samples": 72,
+      "levels": 75,
+      "files": {
+        "domain_mean": "/data3/C.shaoyu/genesis/data/cross_section/RRCE_3km_f00/soundings_VVM/sounding_daily_mean_day-002_domain_mean.txt",
+        "center": "/data3/C.shaoyu/genesis/data/cross_section/RRCE_3km_f00/soundings_VVM/sounding_daily_mean_day-002_center.txt",
+        "antipode": "/data3/C.shaoyu/genesis/data/cross_section/RRCE_3km_f00/soundings_VVM/sounding_daily_mean_day-002_antipode.txt"
+      },
+      "mean_center_km": [
+        490.86597083333345,
+        801.0670916666668
+      ],
+      "column_yx": [
+        267,
+        163
+      ],
+      "antipode_column_yx": [
+        75,
+        355
+      ],
+      "missing_center_steps": [],
+      "format": "sounding_VVM"
+    },
+    {
+      "job": "daily_mean_day-003",
+      "day": 3.0,
+      "samples": 72,
+      "levels": 75,
+      "files": {
+        "domain_mean": "/data3/C.shaoyu/genesis/data/cross_section/RRCE_3km_f00/soundings_VVM/sounding_daily_mean_day-003_domain_mean.txt",
+        "center": "/data3/C.shaoyu/genesis/data/cross_section/RRCE_3km_f00/soundings_VVM/sounding_daily_mean_day-003_center.txt",
+        "antipode": "/data3/C.shaoyu/genesis/data/cross_section/RRCE_3km_f00/soundings_VVM/sounding_daily_mean_day-003_antipode.txt"
+      },
+      "mean_center_km": [
+        707.1482499999997,
+        577.6665833333333
+      ],
+      "column_yx": [
+        192,
+        235
+      ],
+      "antipode_column_yx": [
+        0,
+        43
+      ],
+      "missing_center_steps": [],
+      "format": "sounding_VVM"
+    },
+    {
+      "job": "daily_mean_day-004",
+      "day": 4.0,
+      "samples": 72,
+      "levels": 75,
+      "files": {
+        "domain_mean": "/data3/C.shaoyu/genesis/data/cross_section/RRCE_3km_f00/soundings_VVM/sounding_daily_mean_day-004_domain_mean.txt",
+        "center": "/data3/C.shaoyu/genesis/data/cross_section/RRCE_3km_f00/soundings_VVM/sounding_daily_mean_day-004_center.txt",
+        "antipode": "/data3/C.shaoyu/genesis/data/cross_section/RRCE_3km_f00/soundings_VVM/sounding_daily_mean_day-004_antipode.txt"
+      },
+      "mean_center_km": [
+        534.8806250000001,
+        951.5316666666669
+      ],
+      "column_yx": [
+        317,
+        178
+      ],
+      "antipode_column_yx": [
+        125,
+        370
+      ],
+      "missing_center_steps": [],
+      "format": "sounding_VVM"
+    },
+    {
+      "job": "daily_mean_day-005",
+      "day": 5.0,
+      "samples": 72,
+      "levels": 75,
+      "files": {
+        "domain_mean": "/data3/C.shaoyu/genesis/data/cross_section/RRCE_3km_f00/soundings_VVM/sounding_daily_mean_day-005_domain_mean.txt",
+        "center": "/data3/C.shaoyu/genesis/data/cross_section/RRCE_3km_f00/soundings_VVM/sounding_daily_mean_day-005_center.txt",
+        "antipode": "/data3/C.shaoyu/genesis/data/cross_section/RRCE_3km_f00/soundings_VVM/sounding_daily_mean_day-005_antipode.txt"
+      },
+      "mean_center_km": [
+        425.7347916666666,
+        876.6733458333334
+      ],
+      "column_yx": [
+        292,
+        141
+      ],
+      "antipode_column_yx": [
+        100,
+        333
+      ],
+      "missing_center_steps": [],
+      "format": "sounding_VVM"
+    },
+    {
+      "job": "daily_mean_day-006",
+      "day": 6.0,
+      "samples": 72,
+      "levels": 75,
+      "files": {
+        "domain_mean": "/data3/C.shaoyu/genesis/data/cross_section/RRCE_3km_f00/soundings_VVM/sounding_daily_mean_day-006_domain_mean.txt",
+        "center": "/data3/C.shaoyu/genesis/data/cross_section/RRCE_3km_f00/soundings_VVM/sounding_daily_mean_day-006_center.txt",
+        "antipode": "/data3/C.shaoyu/genesis/data/cross_section/RRCE_3km_f00/soundings_VVM/sounding_daily_mean_day-006_antipode.txt"
+      },
+      "mean_center_km": [
+        382.89688499999994,
+        893.3120833333336
+      ],
+      "column_yx": [
+        297,
+        127
+      ],
+      "antipode_column_yx": [
+        105,
+        319
+      ],
+      "missing_center_steps": [],
+      "format": "sounding_VVM"
+    },
+    {
+      "job": "daily_mean_day-007",
+      "day": 7.0,
+      "samples": 72,
+      "levels": 75,
+      "files": {
+        "domain_mean": "/data3/C.shaoyu/genesis/data/cross_section/RRCE_3km_f00/soundings_VVM/sounding_daily_mean_day-007_domain_mean.txt",
+        "center": "/data3/C.shaoyu/genesis/data/cross_section/RRCE_3km_f00/soundings_VVM/sounding_daily_mean_day-007_center.txt",
+        "antipode": "/data3/C.shaoyu/genesis/data/cross_section/RRCE_3km_f00/soundings_VVM/sounding_daily_mean_day-007_antipode.txt"
+      },
+      "mean_center_km": [
+        450.21845416666673,
+        854.2833333333334
+      ],
+      "column_yx": [
+        284,
+        150
+      ],
+      "antipode_column_yx": [
+        92,
+        342
+      ],
+      "missing_center_steps": [],
+      "format": "sounding_VVM"
+    },
+    {
+      "job": "daily_mean_day-008",
+      "day": 8.0,
+      "samples": 72,
+      "levels": 75,
+      "files": {
+        "domain_mean": "/data3/C.shaoyu/genesis/data/cross_section/RRCE_3km_f00/soundings_VVM/sounding_daily_mean_day-008_domain_mean.txt",
+        "center": "/data3/C.shaoyu/genesis/data/cross_section/RRCE_3km_f00/soundings_VVM/sounding_daily_mean_day-008_center.txt",
+        "antipode": "/data3/C.shaoyu/genesis/data/cross_section/RRCE_3km_f00/soundings_VVM/sounding_daily_mean_day-008_antipode.txt"
+      },
+      "mean_center_km": [
+        686.9509583333333,
+        739.6748333333333
+      ],
+      "column_yx": [
+        246,
+        228
+      ],
+      "antipode_column_yx": [
+        54,
+        36
+      ],
+      "missing_center_steps": [],
+      "format": "sounding_VVM"
+    },
+    {
+      "job": "daily_mean_day-009",
+      "day": 9.0,
+      "samples": 72,
+      "levels": 75,
+      "files": {
+        "domain_mean": "/data3/C.shaoyu/genesis/data/cross_section/RRCE_3km_f00/soundings_VVM/sounding_daily_mean_day-009_domain_mean.txt",
+        "center": "/data3/C.shaoyu/genesis/data/cross_section/RRCE_3km_f00/soundings_VVM/sounding_daily_mean_day-009_center.txt",
+        "antipode": "/data3/C.shaoyu/genesis/data/cross_section/RRCE_3km_f00/soundings_VVM/sounding_daily_mean_day-009_antipode.txt"
+      },
+      "mean_center_km": [
+        411.2404416666666,
+        738.2179166666667
+      ],
+      "column_yx": [
+        246,
+        137
+      ],
+      "antipode_column_yx": [
+        54,
+        329
+      ],
+      "missing_center_steps": [],
+      "format": "sounding_VVM"
+    },
+    {
+      "job": "daily_mean_day-010",
+      "day": 10.0,
+      "samples": 72,
+      "levels": 75,
+      "files": {
+        "domain_mean": "/data3/C.shaoyu/genesis/data/cross_section/RRCE_3km_f00/soundings_VVM/sounding_daily_mean_day-010_domain_mean.txt",
+        "center": "/data3/C.shaoyu/genesis/data/cross_section/RRCE_3km_f00/soundings_VVM/sounding_daily_mean_day-010_center.txt",
+        "antipode": "/data3/C.shaoyu/genesis/data/cross_section/RRCE_3km_f00/soundings_VVM/sounding_daily_mean_day-010_antipode.txt"
+      },
+      "mean_center_km": [
+        482.1396249999999,
+        976.2583333333337
+      ],
+      "column_yx": [
+        325,
+        160
+      ],
+      "antipode_column_yx": [
+        133,
+        352
+      ],
+      "missing_center_steps": [],
+      "format": "sounding_VVM"
+    },
+    {
+      "job": "daily_mean_day-011",
+      "day": 11.0,
+      "samples": 72,
+      "levels": 75,
+      "files": {
+        "domain_mean": "/data3/C.shaoyu/genesis/data/cross_section/RRCE_3km_f00/soundings_VVM/sounding_daily_mean_day-011_domain_mean.txt",
+        "center": "/data3/C.shaoyu/genesis/data/cross_section/RRCE_3km_f00/soundings_VVM/sounding_daily_mean_day-011_center.txt",
+        "antipode": "/data3/C.shaoyu/genesis/data/cross_section/RRCE_3km_f00/soundings_VVM/sounding_daily_mean_day-011_antipode.txt"
+      },
+      "mean_center_km": [
+        416.0574999999999,
+        942.9587499999998
+      ],
+      "column_yx": [
+        314,
+        138
+      ],
+      "antipode_column_yx": [
+        122,
+        330
+      ],
+      "missing_center_steps": [],
+      "format": "sounding_VVM"
+    },
+    {
+      "job": "daily_mean_day-012",
+      "day": 12.0,
+      "samples": 72,
+      "levels": 75,
+      "files": {
+        "domain_mean": "/data3/C.shaoyu/genesis/data/cross_section/RRCE_3km_f00/soundings_VVM/sounding_daily_mean_day-012_domain_mean.txt",
+        "center": "/data3/C.shaoyu/genesis/data/cross_section/RRCE_3km_f00/soundings_VVM/sounding_daily_mean_day-012_center.txt",
+        "antipode": "/data3/C.shaoyu/genesis/data/cross_section/RRCE_3km_f00/soundings_VVM/sounding_daily_mean_day-012_antipode.txt"
+      },
+      "mean_center_km": [
+        414.9949999999998,
+        954.4879166666674
+      ],
+      "column_yx": [
+        318,
+        138
+      ],
+      "antipode_column_yx": [
+        126,
+        330
+      ],
+      "missing_center_steps": [],
+      "format": "sounding_VVM"
+    },
+    {
+      "job": "daily_mean_day-013",
+      "day": 13.0,
+      "samples": 72,
+      "levels": 75,
+      "files": {
+        "domain_mean": "/data3/C.shaoyu/genesis/data/cross_section/RRCE_3km_f00/soundings_VVM/sounding_daily_mean_day-013_domain_mean.txt",
+        "center": "/data3/C.shaoyu/genesis/data/cross_section/RRCE_3km_f00/soundings_VVM/sounding_daily_mean_day-013_center.txt",
+        "antipode": "/data3/C.shaoyu/genesis/data/cross_section/RRCE_3km_f00/soundings_VVM/sounding_daily_mean_day-013_antipode.txt"
+      },
+      "mean_center_km": [
+        498.0404166666667,
+        990.6229166666667
+      ],
+      "column_yx": [
+        330,
+        166
+      ],
+      "antipode_column_yx": [
+        138,
+        358
+      ],
+      "missing_center_steps": [],
+      "format": "sounding_VVM"
+    },
+    {
+      "job": "daily_mean_day-014",
+      "day": 14.0,
+      "samples": 72,
+      "levels": 75,
+      "files": {
+        "domain_mean": "/data3/C.shaoyu/genesis/data/cross_section/RRCE_3km_f00/soundings_VVM/sounding_daily_mean_day-014_domain_mean.txt",
+        "center": "/data3/C.shaoyu/genesis/data/cross_section/RRCE_3km_f00/soundings_VVM/sounding_daily_mean_day-014_center.txt",
+        "antipode": "/data3/C.shaoyu/genesis/data/cross_section/RRCE_3km_f00/soundings_VVM/sounding_daily_mean_day-014_antipode.txt"
+      },
+      "mean_center_km": [
+        497.13999999999993,
+        995.2091666666664
+      ],
+      "column_yx": [
+        331,
+        165
+      ],
+      "antipode_column_yx": [
+        139,
+        357
+      ],
+      "missing_center_steps": [],
+      "format": "sounding_VVM"
+    },
+    {
+      "job": "daily_mean_day-015",
+      "day": 15.0,
+      "samples": 72,
+      "levels": 75,
+      "files": {
+        "domain_mean": "/data3/C.shaoyu/genesis/data/cross_section/RRCE_3km_f00/soundings_VVM/sounding_daily_mean_day-015_domain_mean.txt",
+        "center": "/data3/C.shaoyu/genesis/data/cross_section/RRCE_3km_f00/soundings_VVM/sounding_daily_mean_day-015_center.txt",
+        "antipode": "/data3/C.shaoyu/genesis/data/cross_section/RRCE_3km_f00/soundings_VVM/sounding_daily_mean_day-015_antipode.txt"
+      },
+      "mean_center_km": [
+        493.47708333333344,
+        984.6941666666668
+      ],
+      "column_yx": [
+        328,
+        164
+      ],
+      "antipode_column_yx": [
+        136,
+        356
+      ],
+      "missing_center_steps": [],
+      "format": "sounding_VVM"
+    },
+    {
+      "job": "daily_mean_day-016",
+      "day": 16.0,
+      "samples": 72,
+      "levels": 75,
+      "files": {
+        "domain_mean": "/data3/C.shaoyu/genesis/data/cross_section/RRCE_3km_f00/soundings_VVM/sounding_daily_mean_day-016_domain_mean.txt",
+        "center": "/data3/C.shaoyu/genesis/data/cross_section/RRCE_3km_f00/soundings_VVM/sounding_daily_mean_day-016_center.txt",
+        "antipode": "/data3/C.shaoyu/genesis/data/cross_section/RRCE_3km_f00/soundings_VVM/sounding_daily_mean_day-016_antipode.txt"
+      },
+      "mean_center_km": [
+        516.9879166666665,
+        1003.8050000000001
+      ],
+      "column_yx": [
+        334,
+        172
+      ],
+      "antipode_column_yx": [
+        142,
+        364
+      ],
+      "missing_center_steps": [],
+      "format": "sounding_VVM"
+    },
+    {
+      "job": "daily_mean_day-017",
+      "day": 17.0,
+      "samples": 72,
+      "levels": 75,
+      "files": {
+        "domain_mean": "/data3/C.shaoyu/genesis/data/cross_section/RRCE_3km_f00/soundings_VVM/sounding_daily_mean_day-017_domain_mean.txt",
+        "center": "/data3/C.shaoyu/genesis/data/cross_section/RRCE_3km_f00/soundings_VVM/sounding_daily_mean_day-017_center.txt",
+        "antipode": "/data3/C.shaoyu/genesis/data/cross_section/RRCE_3km_f00/soundings_VVM/sounding_daily_mean_day-017_antipode.txt"
+      },
+      "mean_center_km": [
+        460.9804166666666,
+        995.2429166666666
+      ],
+      "column_yx": [
+        331,
+        153
+      ],
+      "antipode_column_yx": [
+        139,
+        345
+      ],
+      "missing_center_steps": [],
+      "format": "sounding_VVM"
+    },
+    {
+      "job": "daily_mean_day-018",
+      "day": 18.0,
+      "samples": 72,
+      "levels": 75,
+      "files": {
+        "domain_mean": "/data3/C.shaoyu/genesis/data/cross_section/RRCE_3km_f00/soundings_VVM/sounding_daily_mean_day-018_domain_mean.txt",
+        "center": "/data3/C.shaoyu/genesis/data/cross_section/RRCE_3km_f00/soundings_VVM/sounding_daily_mean_day-018_center.txt",
+        "antipode": "/data3/C.shaoyu/genesis/data/cross_section/RRCE_3km_f00/soundings_VVM/sounding_daily_mean_day-018_antipode.txt"
+      },
+      "mean_center_km": [
+        428.1825000000001,
+        963.2691666666665
+      ],
+      "column_yx": [
+        321,
+        142
+      ],
+      "antipode_column_yx": [
+        129,
+        334
+      ],
+      "missing_center_steps": [],
+      "format": "sounding_VVM"
+    },
+    {
+      "job": "daily_mean_day-019",
+      "day": 19.0,
+      "samples": 72,
+      "levels": 75,
+      "files": {
+        "domain_mean": "/data3/C.shaoyu/genesis/data/cross_section/RRCE_3km_f00/soundings_VVM/sounding_daily_mean_day-019_domain_mean.txt",
+        "center": "/data3/C.shaoyu/genesis/data/cross_section/RRCE_3km_f00/soundings_VVM/sounding_daily_mean_day-019_center.txt",
+        "antipode": "/data3/C.shaoyu/genesis/data/cross_section/RRCE_3km_f00/soundings_VVM/sounding_daily_mean_day-019_antipode.txt"
+      },
+      "mean_center_km": [
+        454.5274999999999,
+        951.0862500000005
+      ],
+      "column_yx": [
+        317,
+        151
+      ],
+      "antipode_column_yx": [
+        125,
+        343
+      ],
+      "missing_center_steps": [],
+      "format": "sounding_VVM"
+    },
+    {
+      "job": "daily_mean_day-020",
+      "day": 20.0,
+      "samples": 72,
+      "levels": 75,
+      "files": {
+        "domain_mean": "/data3/C.shaoyu/genesis/data/cross_section/RRCE_3km_f00/soundings_VVM/sounding_daily_mean_day-020_domain_mean.txt",
+        "center": "/data3/C.shaoyu/genesis/data/cross_section/RRCE_3km_f00/soundings_VVM/sounding_daily_mean_day-020_center.txt",
+        "antipode": "/data3/C.shaoyu/genesis/data/cross_section/RRCE_3km_f00/soundings_VVM/sounding_daily_mean_day-020_antipode.txt"
+      },
+      "mean_center_km": [
+        440.28666666666663,
+        986.9062500000005
+      ],
+      "column_yx": [
+        328,
+        146
+      ],
+      "antipode_column_yx": [
+        136,
+        338
+      ],
+      "missing_center_steps": [],
+      "format": "sounding_VVM"
+    },
+    {
+      "job": "daily_mean_day-021",
+      "day": 21.0,
+      "samples": 72,
+      "levels": 75,
+      "files": {
+        "domain_mean": "/data3/C.shaoyu/genesis/data/cross_section/RRCE_3km_f00/soundings_VVM/sounding_daily_mean_day-021_domain_mean.txt",
+        "center": "/data3/C.shaoyu/genesis/data/cross_section/RRCE_3km_f00/soundings_VVM/sounding_daily_mean_day-021_center.txt",
+        "antipode": "/data3/C.shaoyu/genesis/data/cross_section/RRCE_3km_f00/soundings_VVM/sounding_daily_mean_day-021_antipode.txt"
+      },
+      "mean_center_km": [
+        445.73958333333337,
+        979.6658333333334
+      ],
+      "column_yx": [
+        326,
+        148
+      ],
+      "antipode_column_yx": [
+        134,
+        340
+      ],
+      "missing_center_steps": [],
+      "format": "sounding_VVM"
+    },
+    {
+      "job": "daily_mean_day-022",
+      "day": 22.0,
+      "samples": 72,
+      "levels": 75,
+      "files": {
+        "domain_mean": "/data3/C.shaoyu/genesis/data/cross_section/RRCE_3km_f00/soundings_VVM/sounding_daily_mean_day-022_domain_mean.txt",
+        "center": "/data3/C.shaoyu/genesis/data/cross_section/RRCE_3km_f00/soundings_VVM/sounding_daily_mean_day-022_center.txt",
+        "antipode": "/data3/C.shaoyu/genesis/data/cross_section/RRCE_3km_f00/soundings_VVM/sounding_daily_mean_day-022_antipode.txt"
+      },
+      "mean_center_km": [
+        436.8854166666665,
+        968.4404166666666
+      ],
+      "column_yx": [
+        322,
+        145
+      ],
+      "antipode_column_yx": [
+        130,
+        337
+      ],
+      "missing_center_steps": [],
+      "format": "sounding_VVM"
+    },
+    {
+      "job": "daily_mean_day-023",
+      "day": 23.0,
+      "samples": 72,
+      "levels": 75,
+      "files": {
+        "domain_mean": "/data3/C.shaoyu/genesis/data/cross_section/RRCE_3km_f00/soundings_VVM/sounding_daily_mean_day-023_domain_mean.txt",
+        "center": "/data3/C.shaoyu/genesis/data/cross_section/RRCE_3km_f00/soundings_VVM/sounding_daily_mean_day-023_center.txt",
+        "antipode": "/data3/C.shaoyu/genesis/data/cross_section/RRCE_3km_f00/soundings_VVM/sounding_daily_mean_day-023_antipode.txt"
+      },
+      "mean_center_km": [
+        420.8529166666668,
+        969.9108333333334
+      ],
+      "column_yx": [
+        323,
+        140
+      ],
+      "antipode_column_yx": [
+        131,
+        332
+      ],
+      "missing_center_steps": [],
+      "format": "sounding_VVM"
+    },
+    {
+      "job": "daily_mean_day-024",
+      "day": 24.0,
+      "samples": 72,
+      "levels": 75,
+      "files": {
+        "domain_mean": "/data3/C.shaoyu/genesis/data/cross_section/RRCE_3km_f00/soundings_VVM/sounding_daily_mean_day-024_domain_mean.txt",
+        "center": "/data3/C.shaoyu/genesis/data/cross_section/RRCE_3km_f00/soundings_VVM/sounding_daily_mean_day-024_center.txt",
+        "antipode": "/data3/C.shaoyu/genesis/data/cross_section/RRCE_3km_f00/soundings_VVM/sounding_daily_mean_day-024_antipode.txt"
+      },
+      "mean_center_km": [
+        448.29833333333335,
+        979.501666666667
+      ],
+      "column_yx": [
+        326,
+        149
+      ],
+      "antipode_column_yx": [
+        134,
+        341
+      ],
+      "missing_center_steps": [],
+      "format": "sounding_VVM"
+    },
+    {
+      "job": "daily_mean_day-025",
+      "day": 25.0,
+      "samples": 72,
+      "levels": 75,
+      "files": {
+        "domain_mean": "/data3/C.shaoyu/genesis/data/cross_section/RRCE_3km_f00/soundings_VVM/sounding_daily_mean_day-025_domain_mean.txt",
+        "center": "/data3/C.shaoyu/genesis/data/cross_section/RRCE_3km_f00/soundings_VVM/sounding_daily_mean_day-025_center.txt",
+        "antipode": "/data3/C.shaoyu/genesis/data/cross_section/RRCE_3km_f00/soundings_VVM/sounding_daily_mean_day-025_antipode.txt"
+      },
+      "mean_center_km": [
+        416.64333333333326,
+        978.2287499999996
+      ],
+      "column_yx": [
+        326,
+        138
+      ],
+      "antipode_column_yx": [
+        134,
+        330
+      ],
+      "missing_center_steps": [],
+      "format": "sounding_VVM"
+    },
+    {
+      "job": "daily_mean_day-026",
+      "day": 26.0,
+      "samples": 72,
+      "levels": 75,
+      "files": {
+        "domain_mean": "/data3/C.shaoyu/genesis/data/cross_section/RRCE_3km_f00/soundings_VVM/sounding_daily_mean_day-026_domain_mean.txt",
+        "center": "/data3/C.shaoyu/genesis/data/cross_section/RRCE_3km_f00/soundings_VVM/sounding_daily_mean_day-026_center.txt",
+        "antipode": "/data3/C.shaoyu/genesis/data/cross_section/RRCE_3km_f00/soundings_VVM/sounding_daily_mean_day-026_antipode.txt"
+      },
+      "mean_center_km": [
+        439.045,
+        969.1299999999998
+      ],
+      "column_yx": [
+        323,
+        146
+      ],
+      "antipode_column_yx": [
+        131,
+        338
+      ],
+      "missing_center_steps": [],
+      "format": "sounding_VVM"
+    },
+    {
+      "job": "daily_mean_day-027",
+      "day": 27.0,
+      "samples": 72,
+      "levels": 75,
+      "files": {
+        "domain_mean": "/data3/C.shaoyu/genesis/data/cross_section/RRCE_3km_f00/soundings_VVM/sounding_daily_mean_day-027_domain_mean.txt",
+        "center": "/data3/C.shaoyu/genesis/data/cross_section/RRCE_3km_f00/soundings_VVM/sounding_daily_mean_day-027_center.txt",
+        "antipode": "/data3/C.shaoyu/genesis/data/cross_section/RRCE_3km_f00/soundings_VVM/sounding_daily_mean_day-027_antipode.txt"
+      },
+      "mean_center_km": [
+        421.5254166666667,
+        955.7470833333334
+      ],
+      "column_yx": [
+        318,
+        140
+      ],
+      "antipode_column_yx": [
+        126,
+        332
+      ],
+      "missing_center_steps": [],
+      "format": "sounding_VVM"
+    },
+    {
+      "job": "daily_mean_day-028",
+      "day": 28.0,
+      "samples": 72,
+      "levels": 75,
+      "files": {
+        "domain_mean": "/data3/C.shaoyu/genesis/data/cross_section/RRCE_3km_f00/soundings_VVM/sounding_daily_mean_day-028_domain_mean.txt",
+        "center": "/data3/C.shaoyu/genesis/data/cross_section/RRCE_3km_f00/soundings_VVM/sounding_daily_mean_day-028_center.txt",
+        "antipode": "/data3/C.shaoyu/genesis/data/cross_section/RRCE_3km_f00/soundings_VVM/sounding_daily_mean_day-028_antipode.txt"
+      },
+      "mean_center_km": [
+        419.47583333333347,
+        952.9900000000002
+      ],
+      "column_yx": [
+        317,
+        139
+      ],
+      "antipode_column_yx": [
+        125,
+        331
+      ],
+      "missing_center_steps": [],
+      "format": "sounding_VVM"
+    },
+    {
+      "job": "daily_mean_day-029",
+      "day": 29.0,
+      "samples": 72,
+      "levels": 75,
+      "files": {
+        "domain_mean": "/data3/C.shaoyu/genesis/data/cross_section/RRCE_3km_f00/soundings_VVM/sounding_daily_mean_day-029_domain_mean.txt",
+        "center": "/data3/C.shaoyu/genesis/data/cross_section/RRCE_3km_f00/soundings_VVM/sounding_daily_mean_day-029_center.txt",
+        "antipode": "/data3/C.shaoyu/genesis/data/cross_section/RRCE_3km_f00/soundings_VVM/sounding_daily_mean_day-029_antipode.txt"
+      },
+      "mean_center_km": [
+        419.06375,
+        965.0999999999999
+      ],
+      "column_yx": [
+        321,
+        139
+      ],
+      "antipode_column_yx": [
+        129,
+        331
+      ],
+      "missing_center_steps": [],
+      "format": "sounding_VVM"
+    },
+    {
+      "job": "daily_mean_day-030",
+      "day": 30.0,
+      "samples": 72,
+      "levels": 75,
+      "files": {
+        "domain_mean": "/data3/C.shaoyu/genesis/data/cross_section/RRCE_3km_f00/soundings_VVM/sounding_daily_mean_day-030_domain_mean.txt",
+        "center": "/data3/C.shaoyu/genesis/data/cross_section/RRCE_3km_f00/soundings_VVM/sounding_daily_mean_day-030_center.txt",
+        "antipode": "/data3/C.shaoyu/genesis/data/cross_section/RRCE_3km_f00/soundings_VVM/sounding_daily_mean_day-030_antipode.txt"
+      },
+      "mean_center_km": [
+        439.5466666666665,
+        945.4804166666667
+      ],
+      "column_yx": [
+        315,
+        146
+      ],
+      "antipode_column_yx": [
+        123,
+        338
+      ],
+      "missing_center_steps": [],
+      "format": "sounding_VVM"
+    },
+    {
+      "job": "daily_mean_day-031",
+      "day": 31.0,
+      "samples": 72,
+      "levels": 75,
+      "files": {
+        "domain_mean": "/data3/C.shaoyu/genesis/data/cross_section/RRCE_3km_f00/soundings_VVM/sounding_daily_mean_day-031_domain_mean.txt",
+        "center": "/data3/C.shaoyu/genesis/data/cross_section/RRCE_3km_f00/soundings_VVM/sounding_daily_mean_day-031_center.txt",
+        "antipode": "/data3/C.shaoyu/genesis/data/cross_section/RRCE_3km_f00/soundings_VVM/sounding_daily_mean_day-031_antipode.txt"
+      },
+      "mean_center_km": [
+        443.7729166666666,
+        938.0104166666666
+      ],
+      "column_yx": [
+        312,
+        147
+      ],
+      "antipode_column_yx": [
+        120,
+        339
+      ],
+      "missing_center_steps": [],
+      "format": "sounding_VVM"
+    },
+    {
+      "job": "daily_mean_day-032",
+      "day": 32.0,
+      "samples": 72,
+      "levels": 75,
+      "files": {
+        "domain_mean": "/data3/C.shaoyu/genesis/data/cross_section/RRCE_3km_f00/soundings_VVM/sounding_daily_mean_day-032_domain_mean.txt",
+        "center": "/data3/C.shaoyu/genesis/data/cross_section/RRCE_3km_f00/soundings_VVM/sounding_daily_mean_day-032_center.txt",
+        "antipode": "/data3/C.shaoyu/genesis/data/cross_section/RRCE_3km_f00/soundings_VVM/sounding_daily_mean_day-032_antipode.txt"
+      },
+      "mean_center_km": [
+        448.8779166666665,
+        933.0399999999998
+      ],
+      "column_yx": [
+        311,
+        149
+      ],
+      "antipode_column_yx": [
+        119,
+        341
+      ],
+      "missing_center_steps": [],
+      "format": "sounding_VVM"
+    },
+    {
+      "job": "daily_mean_day-033",
+      "day": 33.0,
+      "samples": 72,
+      "levels": 75,
+      "files": {
+        "domain_mean": "/data3/C.shaoyu/genesis/data/cross_section/RRCE_3km_f00/soundings_VVM/sounding_daily_mean_day-033_domain_mean.txt",
+        "center": "/data3/C.shaoyu/genesis/data/cross_section/RRCE_3km_f00/soundings_VVM/sounding_daily_mean_day-033_center.txt",
+        "antipode": "/data3/C.shaoyu/genesis/data/cross_section/RRCE_3km_f00/soundings_VVM/sounding_daily_mean_day-033_antipode.txt"
+      },
+      "mean_center_km": [
+        446.69083333333333,
+        942.1020833333337
+      ],
+      "column_yx": [
+        314,
+        148
+      ],
+      "antipode_column_yx": [
+        122,
+        340
+      ],
+      "missing_center_steps": [],
+      "format": "sounding_VVM"
+    },
+    {
+      "job": "daily_mean_day-034",
+      "day": 34.0,
+      "samples": 72,
+      "levels": 75,
+      "files": {
+        "domain_mean": "/data3/C.shaoyu/genesis/data/cross_section/RRCE_3km_f00/soundings_VVM/sounding_daily_mean_day-034_domain_mean.txt",
+        "center": "/data3/C.shaoyu/genesis/data/cross_section/RRCE_3km_f00/soundings_VVM/sounding_daily_mean_day-034_center.txt",
+        "antipode": "/data3/C.shaoyu/genesis/data/cross_section/RRCE_3km_f00/soundings_VVM/sounding_daily_mean_day-034_antipode.txt"
+      },
+      "mean_center_km": [
+        444.65916666666664,
+        942.9308333333332
+      ],
+      "column_yx": [
+        314,
+        148
+      ],
+      "antipode_column_yx": [
+        122,
+        340
+      ],
+      "missing_center_steps": [],
+      "format": "sounding_VVM"
+    }
+  ]
+}
